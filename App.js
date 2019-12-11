@@ -38,7 +38,8 @@ const App: () => React$Node = () => {
     const changeLanguage = (lang) => {
       i18n.changeLanguage(lang).then(async () => {
         AsyncStorage.setItem('lang', lang).then(() => {
-          // AsyncStorage.getItem('lang').then(lang => alert(`stored lang is: ${lang}`))
+          AsyncStorage.getItem('lang').then(lang => console.log(lang))
+
         })
       })
     }
